@@ -1,0 +1,15 @@
+{
+  "name": "aviene-core",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/"
+  },
+  "author": {
+    "name": "Stefan Karlsson",
+    "email": "iam@stefan-karlsson.se",
+    "url": "https://stefan-karlsson.se"
+  }
+}
