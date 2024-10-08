@@ -1,0 +1,35 @@
+{
+  "name": "@aviene/framework",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {},
+  "peerDependencies": {
+    "@aviene/exceptions": "0.x"
+  },
+  "devDependencies": {
+    "@aviene/exceptions": "workspace:*"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/framework/framework"
+  },
+  "author": {
+    "name": "Stefan Karlsson",
+    "email": "iam@stefan-karlsson.se",
+    "url": "https://stefan-karlsson.se"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./internal": {
+      "import": "./dist/internal.js",
+      "node": "./dist/internal.js",
+      "types": "./dist/internal.d.ts"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@aviene/exceptions",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {},
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/framework/exceptions"
+  },
+  "author": {
+    "name": "Stefan Karlsson",
+    "email": "iam@stefan-karlsson.se",
+    "url": "https://stefan-karlsson.se"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
