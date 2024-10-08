@@ -4,6 +4,10 @@
   "description": "",
   "type": "module",
   "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "typescript": "catalog:",
+    "@biomejs/biome": "catalog:"
+  },
   "repository": {
     "url": "https://github.com/stefan-karlsson/aviene-core/"
   },
@@ -11,5 +15,9 @@
     "name": "Stefan Karlsson",
     "email": "iam@stefan-karlsson.se",
     "url": "https://stefan-karlsson.se"
+  },
+  "engines": {
+    "pnpm": "9.10.0",
+    "node": "22.8.0"
   }
 }
