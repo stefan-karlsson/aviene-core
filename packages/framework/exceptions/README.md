@@ -1,0 +1,3 @@
+# Aviene Exceptions
+
+Generic exceptions

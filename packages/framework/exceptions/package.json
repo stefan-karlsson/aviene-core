@@ -1,10 +1,23 @@
 {
   "name": "@aviene/exceptions",
   "version": "0.0.0",
-  "description": "",
+  "description": "Generic exceptions for the Aviene framework",
   "type": "module",
   "license": "GPL-3.0-or-later",
-  "scripts": {},
+  "scripts": {
+    "build": "tsup-node ./src/* && tsc -p tsconfig.build.json --declaration --emitDeclarationOnly",
+    "lint": "biome lint ./src --write",
+    "format": "biome format ./src --write",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "@aviene/core": "0.x"
+  },
+  "devDependencies": {
+    "@aviene/core": "workspace:*",
+    "vitest": "catalog:"
+  },
+  "files": ["src"],
   "repository": {
     "url": "https://github.com/stefan-karlsson/aviene-core/",
     "directory": "packages/framework/exceptions"
@@ -16,9 +29,11 @@
   },
   "exports": {
     ".": {
+      "source": "./src/index.ts",
       "import": "./dist/index.js",
       "node": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./package.json": "./package.json"
   }
 }
