@@ -2,11 +2,27 @@
   "name": "aviene-core",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "type": "module",
   "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "turbo run build",
+    "lint": "turbo run lint --parallel",
+    "format": "turbo run format --parallel",
+    "test": "turbo run test -- --watch false"
+  },
   "devDependencies": {
-    "@types/node": "catalog:",
+    "turbo": "2.1.3",
+
+    "@tsconfig/node22": "catalog:",
+    "@tsconfig/strictest": "catalog:",
+
+    "tsup": "catalog:",
     "typescript": "catalog:",
+    "@types/node": "catalog:",
+
+    "del-cli": "catalog:",
+
     "@biomejs/biome": "catalog:"
   },
   "repository": {
@@ -17,6 +33,7 @@
     "email": "iam@stefan-karlsson.se",
     "url": "https://stefan-karlsson.se"
   },
+  "packageManager": "pnpm@9.10.0",
   "engines": {
     "pnpm": "9.10.0",
     "node": "22.8.0"

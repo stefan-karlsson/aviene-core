@@ -1,0 +1,12 @@
+{
+    "extends": ["@tsconfig/strictest/tsconfig.json", "@tsconfig/node22/tsconfig.json"],
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "customConditions": ["source"],
+        "composite": true,
+
+        // @tsconfig/strictest overrides
+        "exactOptionalPropertyTypes": false,
+    }
+}

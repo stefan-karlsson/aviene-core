@@ -1,0 +1,35 @@
+{
+  "name": "@aviene/core",
+  "version": "0.0.0",
+  "description": "Core package for the Aviene framework",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "tsup-node ./src/* && tsc -p tsconfig.build.json --declaration --emitDeclarationOnly",
+    "lint": "biome lint ./src --write",
+    "format": "biome format ./src --write",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "catalog:"
+  },
+  "files": ["src"],
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/framework/core"
+  },
+  "author": {
+    "name": "Stefan Karlsson",
+    "email": "iam@stefan-karlsson.se",
+    "url": "https://stefan-karlsson.se"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  }
+}

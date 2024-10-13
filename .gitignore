@@ -1,7 +1,16 @@
+# dependencies
 node_modules
 
+# vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
 
+# build
 dist/
+
+# cache
+.turbo
+
+# typescript
+*.tsbuildinfo
