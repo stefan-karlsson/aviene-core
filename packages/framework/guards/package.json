@@ -1,7 +1,7 @@
 {
-  "name": "@aviene/framework",
+  "name": "@aviene/guards",
   "version": "0.0.0",
-  "description": "The Aviene framework",
+  "description": "Guards",
   "type": "module",
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -11,12 +11,9 @@
     "test": "vitest"
   },
   "peerDependencies": {
-    "@aviene/core": "0.x",
-    "@aviene/exceptions": "0.x",
-    "@aviene/guards": "0.x"
+    "@aviene/exceptions": "0.x"
   },
   "devDependencies": {
-    "@aviene/core": "workspace:*",
     "@aviene/exceptions": "workspace:*",
     "@aviene/guards": "workspace:*",
     "vitest": "catalog:"
@@ -24,7 +21,7 @@
   "files": ["src"],
   "repository": {
     "url": "https://github.com/stefan-karlsson/aviene-core/",
-    "directory": "packages/framework/framework"
+    "directory": "packages/framework/guards"
   },
   "author": {
     "name": "Stefan Karlsson",
