@@ -1,16 +1,25 @@
 {
   "name": "@aviene/framework",
   "version": "0.0.0",
-  "description": "",
+  "description": "The Aviene framework",
   "type": "module",
   "license": "GPL-3.0-or-later",
-  "scripts": {},
+  "scripts": {
+    "build": "tsup-node ./src/* && tsc -p tsconfig.build.json --declaration --emitDeclarationOnly",
+    "lint": "biome lint ./src --write",
+    "format": "biome format ./src --write",
+    "test": "vitest"
+  },
   "peerDependencies": {
+    "@aviene/core": "0.x",
     "@aviene/exceptions": "0.x"
   },
   "devDependencies": {
-    "@aviene/exceptions": "workspace:*"
+    "@aviene/core": "workspace:*",
+    "@aviene/exceptions": "workspace:*",
+    "vitest": "catalog:"
   },
+  "files": ["src"],
   "repository": {
     "url": "https://github.com/stefan-karlsson/aviene-core/",
     "directory": "packages/framework/framework"
@@ -22,14 +31,11 @@
   },
   "exports": {
     ".": {
+      "source": "./src/index.ts",
       "import": "./dist/index.js",
       "node": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./internal": {
-      "import": "./dist/internal.js",
-      "node": "./dist/internal.js",
-      "types": "./dist/internal.d.ts"
-    }
+    "./package.json": "./package.json"
   }
 }
