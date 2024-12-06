@@ -1,0 +1,19 @@
+{
+  "name": "@aviene/tsup",
+  "version": "0.0.0",
+  "description": "Configuration for tsup",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/workspace/tsup"
+  }
+}

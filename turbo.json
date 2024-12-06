@@ -3,19 +3,41 @@
   "globalDependencies": [".env", "**/.env.*local"],
   "globalEnv": ["NODE_ENV"],
   "tasks": {
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**"],
+      "outputLogs": "errors-only"
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["^lint"],
+      "cache": true
+    },
+    "type:check": {
+      "dependsOn": ["transit"],
+      "cache": true
     },
     "format": {
       "dependsOn": ["^format"]
     },
     "test": {
       "dependsOn": ["^build"],
-      "inputs": ["__tests__/**/*.ts", "__tests__/**/*.tsx"]
+      "inputs": ["__tests__/**/*.{integration,unit,perf}.{ts,tsx}"],
+      "cache": true
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "test:coverage": {
+      "dependsOn": ["^test"],
+      "outputs": ["coverage/**"]
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "name": "@aviene/request-dtos",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "tsup-node ./src/* && tsc --declaration --emitDeclarationOnly",
+    "lint": "pnpm biome lint ./src --write",
+    "format": "pnpm biome format ./src --write",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:unit": "vitest --config=vitest.config.unit.ts",
+    "test:integration": "vitest --config=vitest.config.integration.ts",
+    "test:perf": "vitest --config=vitest.config.perf.ts"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@aviene/tsconfig": "workspace:*",
+    "@aviene/tsup": "workspace:*",
+    "@aviene/vitest": "workspace:*"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/framework/interface/request-dtos"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@aviene/common",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "tsup-node ./src/* && tsc --declaration --emitDeclarationOnly",
+    "lint": "pnpm biome lint ./src --write",
+    "format": "pnpm biome format ./src --write"
+  },
+  "peerDependencies": {
+    "@aviene/context": "0.x",
+    "@aviene/logging": "0.x",
+    "@aviene/exceptions": "0.x",
+    "@aviene/guards": "0.x",
+    "@aviene/types": "0.x",
+    "@aviene/message-bus": "0.x"
+  },
+  "devDependencies": {
+    "@aviene/context": "workspace:*",
+    "@aviene/logging": "workspace:*",
+    "@aviene/exceptions": "workspace:*",
+    "@aviene/guards": "workspace:*",
+    "@aviene/types": "workspace:*",
+    "@aviene/message-bus": "workspace:*",
+
+    "@aviene/tsconfig": "workspace:*",
+    "@aviene/tsup": "workspace:*"
+  },
+  "files": ["src"],
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/framework/common"
+  }
+}

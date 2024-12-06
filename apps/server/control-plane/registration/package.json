@@ -1,0 +1,34 @@
+{
+  "name": "@aviene/registration",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "build": "tsup-node ./src/* && tsc --declaration --emitDeclarationOnly",
+    "lint": "pnpm biome lint ./src --write",
+    "format": "pnpm biome format ./src --write",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:unit": "vitest --config=vitest.config.unit.ts",
+    "test:integration": "vitest --config=vitest.config.integration.ts",
+    "test:perf": "vitest --config=vitest.config.perf.ts"
+  },
+  "peerDependencies": {
+    "@aviene/framework": "0.x"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@aviene/framework": "workspace:*",
+    "@aviene/tsconfig": "workspace:*",
+    "@aviene/tsup": "workspace:*",
+    "@aviene/vitest": "workspace:*"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/server/control-plane/registration"
+  }
+}

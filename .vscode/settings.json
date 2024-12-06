@@ -1,23 +1,60 @@
 {
   // Editor
   "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports.biome": "explicit",
     "source.fixAll.biome": "explicit",
-    "source.sortImports.biome": "explicit"
+    "source.organizeImports.biome": "explicit"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
 
   // Explorer
   "explorer.fileNesting.enabled": true,
-
-  // Github Copilot
-  "github.copilot.chat.experimental.codeGeneration.instructions": [
-    {
-      "file": ".github/copilot-instructions.md"
-    }
-  ],
+  "explorer.excludeGitIgnore": false,
 
   // Spell Checking
-  "cSpell.words": ["treeshake"]
+  "cSpell.words": ["aviene", "pino"],
+
+  "cSpell.ignorePaths": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "package-lock.json",
+    "*.lock",
+    "**/package.json",
+    ".vscode/settings.json",
+    "**/biome.json*"
+  ],
+
+  "cSpell.ignoreRegExpList": [
+    "/^import\\s+[^;]*;/", // Ignores import statements
+    "/^export\\s+[^;]*;/", // Ignores export statements
+    "/^module\\.exports\\s*=\\s*[^;]*;/", // Ignores module.exports in CommonJS
+    "/^exports\\.[^=]+\\s*=\\s*[^;]*;/" // Ignores named exports in CommonJS
+  ],
+
+  // JSON Schema
+  "json.schemas": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
+      "fileMatch": ["tsup.config.ts"]
+    }
+  ]
 }
