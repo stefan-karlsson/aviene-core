@@ -1,5 +1,6 @@
-export * from '@aviene/application';
-export * from '@aviene/common';
-export * from '@aviene/domain';
-export * from '@aviene/infrastructure';
-export * from '@aviene/interface';
+export * from './exports/application';
+export * from './exports/common';
+export * from './exports/domain';
+export * from './exports/infrastructure';
+export * from './exports/interface';
+

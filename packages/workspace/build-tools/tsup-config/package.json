@@ -1,0 +1,27 @@
+{
+  "name": "@aviene/tsup-config",
+  "version": "0.0.0",
+  "description": "Custom configuration for `tsup` bundler.",
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/workspace/build-tools/tsup-config"
+  },
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@aviene/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@microsoft/api-extractor": "^7.48.0",
+    "tsup": "^8.3.5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  }
+}

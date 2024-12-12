@@ -28,7 +28,8 @@
   // Explorer
   "explorer.fileNesting.enabled": true,
   "explorer.excludeGitIgnore": false,
-
+  "explorer.compactFolders": false,
+  
   // Spell Checking
   "cSpell.words": ["aviene", "pino"],
 
@@ -49,12 +50,4 @@
     "/^module\\.exports\\s*=\\s*[^;]*;/", // Ignores module.exports in CommonJS
     "/^exports\\.[^=]+\\s*=\\s*[^;]*;/" // Ignores named exports in CommonJS
   ],
-
-  // JSON Schema
-  "json.schemas": [
-    {
-      "url": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
-      "fileMatch": ["tsup.config.ts"]
-    }
-  ]
 }

@@ -1,0 +1,43 @@
+{
+  "name": "@aviene/vitest-config",
+  "version": "0.0.0",
+  "description": "Custom configurations for integrating and setting up the Vitest testing framework.",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/workspace/testing/vitest-config"
+  },
+  "scripts": {
+    "build": "pnpm dlx tsx ./build.ts && tsc ./src/index.ts --declaration --emitDeclarationOnly"
+  },
+  "peerDependencies": {
+    "vitest": "2.x"
+  },
+  "devDependencies": {
+    "@aviene/tsup-config": "workspace:*",
+    "@aviene/typescript-config": "workspace:*",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./integration-test": {
+      "types": "./dist/workspace-integration-test.d.ts",
+      "import": "./dist/workspace-integration-test.mjs",
+      "require": "./dist/workspace-integration-test.cjs"
+    },
+    "./unit-test": {
+      "types": "./dist/workspace-unit-test.d.ts",
+      "import": "./dist/workspace-unit-test.mjs",
+      "require": "./dist/workspace-unit-test.cjs"
+    }
+  }
+}

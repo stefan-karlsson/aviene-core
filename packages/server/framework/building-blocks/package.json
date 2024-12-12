@@ -1,0 +1,44 @@
+{
+  "name": "@aviene/building-blocks",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "pnpm dlx tsx ./build.ts && tsc ./src/index.ts --declaration --emitDeclarationOnly",
+    "lint": "pnpm biome lint ./src --write",
+    "format": "pnpm biome format ./src --write",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:unit": "vitest --config=vitest.config.unit.ts",
+    "test:integration": "vitest --config=vitest.config.integration.ts",
+    "test:perf": "vitest --config=vitest.config.perf.ts"
+  },
+  "peerDependencies": {
+    "@aviene/exceptions": "0.x",
+    "@aviene/guards": "0.x"
+  },
+  "devDependencies": {
+    "@aviene/exceptions": "workspace:*",
+    "@aviene/guards": "workspace:*",
+
+    "@aviene/typescript-config": "workspace:*",
+    "@aviene/tsup-config": "workspace:*",
+
+    "@aviene/vitest-config": "workspace:*"
+  },
+  "files": ["src"],
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/framework/building-blocks"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": "./dist/index.js",
+      "node": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  }
+}

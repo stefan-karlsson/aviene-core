@@ -6,7 +6,7 @@
   "license": "GPL-3.0-or-later",
   "private": true,
   "scripts": {
-    "build": "tsup-node ./src/* && tsc --declaration --emitDeclarationOnly",
+    "build": "pnpm dlx tsx ./build.ts && tsc ./src/index.ts --declaration --emitDeclarationOnly",
     "lint": "pnpm biome lint ./src --write",
     "format": "pnpm biome format ./src --write",
     "test": "vitest",
@@ -23,9 +23,9 @@
   },
   "devDependencies": {
     "@aviene/framework": "workspace:*",
-    "@aviene/tsconfig": "workspace:*",
-    "@aviene/tsup": "workspace:*",
-    "@aviene/vitest": "workspace:*"
+    "@aviene/typescript-config": "workspace:*",
+    "@aviene/tsup-config": "workspace:*",
+    "@aviene/vitest-config": "workspace:*"
   },
   "repository": {
     "url": "https://github.com/stefan-karlsson/aviene-core/",

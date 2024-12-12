@@ -12,7 +12,7 @@ export class RegisterTenantService implements CommandHandler {
   constructor(protected readonly config: RegisterTenantServiceConfig) {}
 
   async execute(command: RegisterTenantCommand): Promise<Result<AggregateId, TenantAlreadyExistsError>> {
-    const { id, tenantName, email, tier, metadata } = command;
+    const { tenantName, email, tier } = command;
 
     const tenantTier = TenantTier.fromString(tier);
 

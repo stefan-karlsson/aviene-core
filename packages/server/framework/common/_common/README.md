@@ -1,1 +1,0 @@
-# Aviene Common Functionality

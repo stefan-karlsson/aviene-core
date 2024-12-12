@@ -1,5 +1,5 @@
 {
-  "extends": ["@aviene/tsconfig/node22"],
+  "extends": ["@aviene/typescript-config/node22"],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"

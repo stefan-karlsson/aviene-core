@@ -12,5 +12,6 @@ dist/
 # cache
 .turbo
 
-# typescript
+# build
 *.tsbuildinfo
+.tsup/

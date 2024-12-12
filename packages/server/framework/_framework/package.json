@@ -5,35 +5,73 @@
   "type": "module",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "build": "tsup-node ./src/* && tsc --declaration --emitDeclarationOnly",
+    "build": "pnpm dlx tsx ./build.ts && tsc ./src/index.ts --declaration --emitDeclarationOnly",
     "lint": "pnpm biome lint ./src --write",
     "format": "pnpm biome format ./src --write"
   },
   "peerDependencies": {
-    "@aviene/application": "0.x",
-    "@aviene/common": "0.x",
-    "@aviene/domain": "0.x",
-    "@aviene/infrastructure": "0.x",
-    "@aviene/interface": "0.x"
+    "@aviene/commands": "0.x",
+    "@aviene/context": "0.x",
+    "@aviene/exceptions": "0.x",
+    "@aviene/guards": "0.x",
+    "@aviene/logging": "0.x",
+    "@aviene/message-bus": "0.x",
+    "@aviene/types": "0.x",
+    "@aviene/building-blocks": "0.x",
+    "@aviene/value-objects": "0.x",
+    "@aviene/aws-lambda": "0.x",
+    "@aviene/controllers": "0.x",
+    "@aviene/request-dtos": "0.x",
+    "@aviene/response-dtos": "0.x"
   },
   "devDependencies": {
-    "@aviene/application": "workspace:*",
-    "@aviene/common": "workspace:*",
-    "@aviene/domain": "workspace:*",
-    "@aviene/infrastructure": "workspace:*",
-    "@aviene/interface": "workspace:*",
-
-    "@aviene/tsconfig": "workspace:*",
-    "@aviene/tsup": "workspace:*"
+    "@aviene/commands": "workspace:*",
+    "@aviene/context": "workspace:*",
+    "@aviene/exceptions": "workspace:*",
+    "@aviene/guards": "workspace:*",
+    "@aviene/logging": "workspace:*",
+    "@aviene/message-bus": "workspace:*",
+    "@aviene/types": "workspace:*",
+    "@aviene/building-blocks": "workspace:*",
+    "@aviene/value-objects": "workspace:*",
+    "@aviene/aws-lambda": "workspace:*",
+    "@aviene/controllers": "workspace:*",
+    "@aviene/request-dtos": "workspace:*",
+    "@aviene/response-dtos": "workspace:*"
   },
   "files": ["src"],
   "exports": {
     ".": {
-      "source": "./src/index.ts",
-      "import": "./dist/index.js",
-      "node": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
+    "./interface": {
+      "import": "./dist/interface.mjs",
+      "require": "./dist/interface.cjs",
+      "types": "./dist/interface.d.ts"
+    },
+    "./app": {
+      "import": "./dist/application.mjs",
+      "require": "./dist/application.cjs",
+      "types": "./dist/application.d.ts"
+    },
+    "./domain": {
+      "import": "./dist/domain.mjs",
+      "require": "./dist/domain.cjs",
+      "types": "./dist/domain.d.ts"
+    },
+    "./infra": {
+      "import": "./dist/infrastructure.mjs",
+      "require": "./dist/infrastructure.cjs",
+      "types": "./dist/infrastructure.d.ts"
+    },
+    "./common": {
+      "import": "./dist/common.mjs",
+      "require": "./dist/common.cjs",
+      "types": "./dist/common.d.ts"
+    },
+
     "./package.json": "./package.json"
   },
   "repository": {

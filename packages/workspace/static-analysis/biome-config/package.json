@@ -1,0 +1,17 @@
+{
+  "name": "@aviene/biome-config",
+  "version": "0.0.0",
+  "description": "Custom configuration for integrating Biome",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "peerDependencies": {
+    "@biomejs/biome": "1.x"
+  },
+  "exports": {
+    ".": "./src/biome.jsonc"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/workspace/static-analysis/biome-config"
+  }
+}

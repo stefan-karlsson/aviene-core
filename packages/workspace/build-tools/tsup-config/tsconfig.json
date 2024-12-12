@@ -1,0 +1,11 @@
+{
+    "extends": "@aviene/typescript-config/node22",
+    "compilerOptions": {
+      "outDir": "dist",
+      "rootDir": "src",
+
+      "declaration": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+  }

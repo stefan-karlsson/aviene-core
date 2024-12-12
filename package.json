@@ -17,8 +17,6 @@
   "devDependencies": {
     "@types/node": "catalog:",
     "turbo": "catalog:",
-    "vitest": "catalog:",
-    "tsup": "catalog:",
     "typescript": "catalog:"
   },
   "repository": {

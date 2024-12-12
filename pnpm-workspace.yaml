@@ -1,28 +1,15 @@
 packages:
-  - 'apps/browser/*'
-  - 'apps/server/application-plane/*'
-  - 'apps/server/control-plane/*'
+  - apps/browser/*/*
+  - apps/server/*/*
 
-  - 'packages/browser/framework/*'
-  - 'packages/browser/tools/*'
-
-  - 'packages/server/framework/_framework'
-  - 'packages/server/framework/application/*'
-  - 'packages/server/framework/common/*'
-  - 'packages/server/framework/domain/*'
-  - 'packages/server/framework/infrastructure/*'
-  - 'packages/server/framework/interface/*'
-  - 'packages/server/framework/tools/*'
-
-  - 'packages/workspace/*'
-
+  - packages/browser/*/*
+  - packages/server/*/*
+  - packages/workspace/*/*
 
   - '!**/__docs/**'
   - '!**/__test__/**'
 
 catalog:
   '@types/node': ^22.7.5
-  tsup: ^8.3.0
-  vitest: ^2.1.2
   turbo: ^2.1.3
   typescript: ^5.6.3

@@ -1,0 +1,21 @@
+{
+  "name": "@aviene/typescript-config",
+  "version": "0.0.0",
+  "description": "Custom configurations for `typescript` transpiler.",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "peerDependencies": {
+    "typescript": "5.x"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "22.0.0",
+    "@tsconfig/strictest": "2.0.5"
+  },
+  "exports": {
+    "./node22": "./src/node22.json"
+  },
+  "repository": {
+    "url": "https://github.com/stefan-karlsson/aviene-core/",
+    "directory": "packages/workspace/language-tools/typescript-config"
+  }
+}
