@@ -22,9 +22,9 @@
   "repository": {
     "url": "https://github.com/stefan-karlsson/aviene-core/"
   },
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.15.1",
   "engines": {
-    "pnpm": "9.10.0",
-    "node": "22.8.0"
+    "pnpm": "9.15.1",
+    "node": "22.12.0"
   }
 }
